@@ -16,5 +16,12 @@ namespace S2_POE_Part_1
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //Testing here too
     }
 }
