@@ -52,6 +52,11 @@ namespace S2_POE_Part_1
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Testing here too
     }
 }
