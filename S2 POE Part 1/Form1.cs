@@ -22,6 +22,36 @@ namespace S2_POE_Part_1
 
         }
 
+        private void button72_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button71_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button70_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button69_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button68_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button67_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Testing here too
     }
 }
