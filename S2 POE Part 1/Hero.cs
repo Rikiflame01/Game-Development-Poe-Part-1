@@ -25,12 +25,7 @@ namespace S2_POE_Part_1
             get { return maxHp; }
             set { maxHp = 20; }
         }
-
-        public int heroDamage
-        {
-            get { return damage; }
-            set { damage = 2; }
-        }
+        //Remember hero damage = 2!
 
         /*
          * • An overridden ReturnMove() method: This method receives a movement
