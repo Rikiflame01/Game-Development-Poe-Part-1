@@ -36,7 +36,7 @@ namespace S2_POE_Part_1
             left,
             right
         }
-
+        
         public bool alive = true;
 
         public bool IsDead()
