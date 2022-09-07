@@ -57,6 +57,11 @@ namespace S2_POE_Part_1
 
         }
 
+        private void gameLog_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //Testing here too
     }
 }

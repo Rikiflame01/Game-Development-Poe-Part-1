@@ -55,6 +55,7 @@
             this.button53 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.gameLog = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -301,11 +302,21 @@
             this.label1.Text = "Health";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // gameLog
+            // 
+            this.gameLog.Location = new System.Drawing.Point(410, 176);
+            this.gameLog.Multiline = true;
+            this.gameLog.Name = "gameLog";
+            this.gameLog.Size = new System.Drawing.Size(122, 86);
+            this.gameLog.TabIndex = 62;
+            this.gameLog.TextChanged += new System.EventHandler(this.gameLog_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 423);
+            this.Controls.Add(this.gameLog);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button49);
@@ -370,6 +381,7 @@
         private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox gameLog;
     }
 }
 

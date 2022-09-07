@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Game Engine.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Hero.cs" />
+    <Compile Include="SwampCreature.cs" />
+    <Compile Include="Enemy.cs" />
     <Compile Include="EmptyTile.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Obstacle subclass.cs" />
