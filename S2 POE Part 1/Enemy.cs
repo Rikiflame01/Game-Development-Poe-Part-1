@@ -13,16 +13,25 @@ namespace S2_POE_Part_1
 {
     public abstract class Enemy : Character
     {
-        protected Enemy(int xVal, int yVal, int damage, int hp, int maxHp, string characterSymbol, TileType typeOfTile) : base(xVal, yVal, characterSymbol, typeOfTile)
+        public Enemy(int xVal, int yVal, int damage, int hp, int maxHp, string characterSymbol, TileType typeOfTile) : base(xVal, yVal, characterSymbol, typeOfTile)
         {
             this.x = xVal;
             this.y = yVal;
-            this.type = typeOfTile;
+            this._tileType = typeOfTile;
             this.damage = damage;
             this.hp = hp;
             this.maxHp = maxHp;
             symbol = characterSymbol;
+
+            //random object used for randomizing numbers
         }
+
+        public Enemy(int xVal, int yVal)
+        {
+            x = xVal;
+            y = yVal;
+        }
+
         /*
          * It delegates its X and Y
            position to the Character subclass via a constructor initialiser. It then sets all

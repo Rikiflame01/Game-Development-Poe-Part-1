@@ -12,6 +12,13 @@ namespace S2_POE_Part_1
 {
     public partial class Form1 : Form
     {
+        int forwardClick = 0;
+        int backClick = 0;
+        int rightClick = 0;
+        int leftClick = 0;
+
+        int defaultX = 451;
+        int defaultY = 310;
 
         Random rand = new Random();
         List<PictureBox> items = new List<PictureBox>();
@@ -21,6 +28,12 @@ namespace S2_POE_Part_1
         public Form1()
         {
             InitializeComponent();
+            // Hero textHero = new Hero(50, 50, "H", Tile.TileType.Hero);
+            //gameLog.Text = textHero.returnMessage();
+
+
+            //Hero
+            
         }
 
         private void MakePictureBox()
@@ -140,19 +153,6 @@ namespace S2_POE_Part_1
 
             //Obstacles
 
-            //Hero
-            PictureBox hero = new PictureBox();
-            hero.Height = 50;
-            hero.Width = 50;
-            hero.BackColor = Color.Blue;
-
-            int xHero = 425;
-            int yHero = 350;
-
-            hero.Location = new Point(xHero, yHero);
-
-            items.Add(hero);
-            this.Controls.Add(hero);
 
             newEnemy1.BringToFront();
             newEnemy2.BringToFront();
@@ -161,7 +161,6 @@ namespace S2_POE_Part_1
             goldObj1.BringToFront();
             goldObj2.BringToFront();
             goldObj3.BringToFront();
-            hero.BringToFront();
 
         }
 
@@ -227,6 +226,40 @@ namespace S2_POE_Part_1
         private void gameLog_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void Forward_Click(object sender, EventArgs e)
+        {
+            //vision array check
+            
+                defaultY -= 50;
+
+
+                this.heroBox.Location = new Point(defaultX, defaultY);
+        }
+
+        private void rightButton_Click(object sender, EventArgs e)
+        {
+            defaultX += 50;
+
+
+            this.heroBox.Location = new Point(defaultX, defaultY);
+        }
+
+        private void leftButton_Click(object sender, EventArgs e)
+        {
+            defaultX -= 50;
+
+
+            this.heroBox.Location = new Point(defaultX, defaultY);
+        }
+
+        private void Backward_Click(object sender, EventArgs e)
+        {
+            defaultY += 50;
+
+
+            this.heroBox.Location = new Point(defaultX, defaultY);
         }
 
 

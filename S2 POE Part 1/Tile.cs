@@ -12,6 +12,7 @@ namespace S2_POE_Part_1
 
         protected int x;
         protected int y;
+        protected TileType _tileType;
 
         public enum TileType
         {
@@ -31,19 +32,23 @@ namespace S2_POE_Part_1
             get { return y; }
             set { y = value; }
         }
-
-        public TileType type
+        public Tile()
         {
-            get { return type; }
-            set { type = value; }
+
+        }
+
+        public Tile(int xVal, int yVal)
+        {
+            this.x = xVal;
+            this.y = yVal;
         }
 
         public Tile(int xVal, int yVal, TileType typeOfTile)
         {
             this.x = xVal;
             this.y = yVal;
-            this.type = typeOfTile;
+            this._tileType = typeOfTile;
         }
-
+        
     }
 }

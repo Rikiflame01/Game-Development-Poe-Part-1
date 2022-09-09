@@ -80,6 +80,7 @@
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
+            this.heroBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -119,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heroBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Map
@@ -157,6 +159,7 @@
             this.leftButton.TabIndex = 63;
             this.leftButton.Text = "Left";
             this.leftButton.UseVisualStyleBackColor = true;
+            this.leftButton.Click += new System.EventHandler(this.leftButton_Click);
             // 
             // Forward
             // 
@@ -166,6 +169,7 @@
             this.Forward.TabIndex = 64;
             this.Forward.Text = "Forward";
             this.Forward.UseVisualStyleBackColor = true;
+            this.Forward.Click += new System.EventHandler(this.Forward_Click);
             // 
             // rightButton
             // 
@@ -175,6 +179,7 @@
             this.rightButton.TabIndex = 65;
             this.rightButton.Text = "Right";
             this.rightButton.UseVisualStyleBackColor = true;
+            this.rightButton.Click += new System.EventHandler(this.rightButton_Click);
             // 
             // Backward
             // 
@@ -184,6 +189,7 @@
             this.Backward.TabIndex = 66;
             this.Backward.Text = "Backward";
             this.Backward.UseVisualStyleBackColor = true;
+            this.Backward.Click += new System.EventHandler(this.Backward_Click);
             // 
             // label2
             // 
@@ -579,11 +585,21 @@
             this.pictureBox39.TabIndex = 101;
             this.pictureBox39.TabStop = false;
             // 
+            // heroBox
+            // 
+            this.heroBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.heroBox.Location = new System.Drawing.Point(451, 310);
+            this.heroBox.Name = "heroBox";
+            this.heroBox.Size = new System.Drawing.Size(50, 50);
+            this.heroBox.TabIndex = 112;
+            this.heroBox.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 788);
+            this.Controls.Add(this.heroBox);
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox31);
@@ -677,6 +693,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heroBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,6 +751,7 @@
         private System.Windows.Forms.PictureBox pictureBox37;
         private System.Windows.Forms.PictureBox pictureBox38;
         private System.Windows.Forms.PictureBox pictureBox39;
+        private System.Windows.Forms.PictureBox heroBox;
     }
 }
 

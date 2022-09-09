@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace S2_POE_Part_1
 {
     public class Hero : Character
     {
+
         public Hero(int xVal, int yVal, string characterSymbol, TileType typeOfTile) : base(xVal, yVal, characterSymbol, typeOfTile)
         {
             x = xVal;
             y = yVal;
 
         }
+        
+        
 
         public int heroHealth
         {
@@ -45,6 +49,8 @@ namespace S2_POE_Part_1
         [X,Y]
          */
 
-        
+        //TextBox textbox = new TextBox();
+
+        //public string returnMessage() { return "HI"; }
     }
 }

@@ -8,9 +8,10 @@ namespace S2_POE_Part_1
 {
     public class EmptyTile : Tile
     {
-        public EmptyTile(int xVal, int yVal, TileType typeOfTile) : base(xVal, yVal, typeOfTile)
+        public EmptyTile(int xVal, int yVal ): base(xVal, yVal)
         {
-
+            this.x = xVal;
+            this.y = yVal;
         }
 
 
