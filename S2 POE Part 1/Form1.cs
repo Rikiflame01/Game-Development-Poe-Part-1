@@ -17,8 +17,9 @@ namespace S2_POE_Part_1
         int rightClick = 0;
         int leftClick = 0;
 
-        int defaultX = 451;
-        int defaultY = 310;
+        public int defaultX = 400;
+        public int defaultY = 322;
+        
 
         Random rand = new Random();
         List<PictureBox> items = new List<PictureBox>();
@@ -185,7 +186,12 @@ namespace S2_POE_Part_1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+            
+            Hero myHero = new Hero(2, 10, 10,defaultX, defaultY);
+            
 
+            this.gameLog.Text = myHero.ToString();
         }
 
         private void button72_Click(object sender, EventArgs e)
@@ -230,36 +236,57 @@ namespace S2_POE_Part_1
 
         public void Forward_Click(object sender, EventArgs e)
         {
+            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);            
             //vision array check
-            
+            myHero.IsDead();
+            if (myHero.IsDead() == false)
+            {
+                this.gameLog.Text = "PLAYER IS DEAD";
+                return;
+            }
+            else
+            {
                 defaultY -= 50;
 
 
                 this.heroBox.Location = new Point(defaultX, defaultY);
+
+                this.gameLog.Text = myHero.ToString();
+            }
         }
 
         private void rightButton_Click(object sender, EventArgs e)
         {
+            
             defaultX += 50;
 
 
             this.heroBox.Location = new Point(defaultX, defaultY);
+
+            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);
+            this.gameLog.Text = myHero.ToString();
         }
 
         private void leftButton_Click(object sender, EventArgs e)
         {
+            
             defaultX -= 50;
 
 
             this.heroBox.Location = new Point(defaultX, defaultY);
+            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);
+            this.gameLog.Text = myHero.ToString();
         }
 
         private void Backward_Click(object sender, EventArgs e)
         {
+           
             defaultY += 50;
 
 
             this.heroBox.Location = new Point(defaultX, defaultY);
+            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);
+            this.gameLog.Text = myHero.ToString();
         }
 
 

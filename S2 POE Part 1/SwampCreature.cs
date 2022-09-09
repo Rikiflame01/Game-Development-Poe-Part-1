@@ -28,6 +28,12 @@ namespace S2_POE_Part_1
 
         }
 
+        public SwampCreature(int xVal, int yVal)
+        {
+            x = xVal;
+            y = yVal;
+        }
+
         public int swampCreatureHealth
         {
             get { return hp; }
@@ -38,5 +44,13 @@ namespace S2_POE_Part_1
             get { return damage; }
             set { damage = 1; }
         }
+
+        /*
+         * An overridden ReturnMove() method: This method does not use the optional
+        movement parameter. Instead, it randoms a direction for the Swamp Creature to
+        move in and checks that movement against the Swamp Creature’s vision array. If
+        something is in the way (a Hero or a Wall for now), the random position should be
+        rerolled. When a valid position is chosen, it is returned from the method.
+         */
     }
 }

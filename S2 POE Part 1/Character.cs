@@ -33,6 +33,13 @@ namespace S2_POE_Part_1
             symbol=characterSymbol;
         }
 
+        public Character(int xVal, int yVal, int health, int maxHealth)
+        {
+            x = xVal;
+            y = yVal;
+            this.hp = health;
+            this.maxHp = maxHealth;
+        }
 
         protected int range;
         protected int hp;
@@ -61,12 +68,14 @@ namespace S2_POE_Part_1
             later overriding by specific enemy types.
             */
         }
-
         public bool IsDead()
         {
             if (alive == false) { return true; }
             return false;
         }
+
+
+
         public virtual bool CheckRange()
         {
             if (isInRange == true) { return true; }
@@ -99,6 +108,7 @@ namespace S2_POE_Part_1
         move it up/down/left/right based on the identifier from the enum.
         }
         */
+
 
         /*public abstract Movement ReturnMove(Movement move = 0)
         {

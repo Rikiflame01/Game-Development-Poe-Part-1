@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace S2_POE_Part_1
 {
@@ -17,7 +18,24 @@ namespace S2_POE_Part_1
 
         }
         
-        
+        public Hero(int xVal, int yVal, int health, int maxHealth)
+        {
+            x = xVal;
+            y = yVal;
+            this.hp = health;
+            this.maxHp = maxHealth;
+
+
+        }
+        public Hero(int heroDamage, int maxHealth, int health, int xVal, int yVal)
+        {
+            x = xVal;
+            y = yVal;
+            this.hp = health;
+            this.maxHp = maxHealth;
+            this.damage = heroDamage;
+
+        }
 
         public int heroHealth
         {
@@ -39,15 +57,14 @@ namespace S2_POE_Part_1
         if it is valid. If it is not valid, it returns a MovementEnum.None, which signals
         to the calling method that a movement should not be made.
          */
+        
 
-        /*
-         * An overridden ToString() method: This returns the formatted Player Stats as
-        shown below:
-        Player Stats:
-        HP: HP/Max HP
-        Damage: 2
-        [X,Y]
-         */
+        public override string ToString()
+        {
+            return "Player stats: " + Environment.NewLine + "Damage:" + damage + Environment.NewLine + "Health: " + hp + " /" + maxHp+ Environment.NewLine+"["+xPos+","+yPos+"]".ToString();
+
+        }
+
 
         //TextBox textbox = new TextBox();
 

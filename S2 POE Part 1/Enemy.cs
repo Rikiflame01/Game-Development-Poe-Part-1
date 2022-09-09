@@ -25,7 +25,10 @@ namespace S2_POE_Part_1
 
             //random object used for randomizing numbers
         }
+        public Enemy()
+        {
 
+        }
         public Enemy(int xVal, int yVal)
         {
             x = xVal;
