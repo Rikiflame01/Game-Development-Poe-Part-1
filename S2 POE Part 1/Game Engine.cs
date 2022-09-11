@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace S2_POE_Part_1
 {
-    internal class Class1
+    public class GameEngine
     {
+        private string map;
+
+        public string Map
+        {
+            get { return map; }
+        }
+
+        public GameEngine()
+        {
+
+        }
+
+        public bool MovePlayer()
+        {
+            return true;
+        }
+
     }
 }

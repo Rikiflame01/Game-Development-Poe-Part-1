@@ -25,29 +25,42 @@ namespace S2_POE_Part_1
 
             //random object used for randomizing numbers
         }
-        public Enemy()
-        {
 
+        public Enemy(){
+
+        }
+
+        public Enemy(int health, int maxHealth, int damage, int xVal, int yVal)
+        {
+            x = xVal;
+            y = yVal;
+            this.damage = damage;
+            this.hp = health;
+            this.maxHp = maxHealth;
         }
         public Enemy(int xVal, int yVal)
         {
             x = xVal;
             y = yVal;
         }
-
+        public Enemy(int damage,int xVal, int yVal)
+        {
+            this.damage = damage;
+            x = xVal;
+            y = yVal;
+        }
         /*
          * It delegates its X and Y
            position to the Character subclass via a constructor initialiser. It then sets all
            the relevant member variables.
          */
 
-        /*
-            • An overridden ToString method that, using the enemy’s class, outputs a
-            string that looks as follows:
-            EnemyClassName at [X, Y] (Amount DMG)
-            This will be used by the Enemy subclasses.
-         */
+        /*public override string ToString()
+        {
+            return "Swamp Creature at" + "[" + xPos + "," + yPos + "]" +"(" +damage+")".ToString();
 
+        }
+        */
     }
 
 

@@ -33,17 +33,39 @@ namespace S2_POE_Part_1
             x = xVal;
             y = yVal;
         }
+        public SwampCreature(int damage,int xVal, int yVal)
+        {
+            this.CharacterDamage = damage;
+            x = xVal;
+            y = yVal;
+        }
 
+        public SwampCreature(int Cdamage,int health, int maxHealth, int xVal, int yVal)
+        {
+            x = xVal;
+            y = yVal;
+            this.CharacterDamage = Cdamage;
+            this.hp = health;
+            this.maxHp = maxHealth;
+        }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
+
+        /*
         public int swampCreatureHealth
         {
             get { return hp; }
-            set { hp = 10; }
+            set { hp = 100; }
         }
         public int swampCreatureDamage
         {
             get { return damage; }
             set { damage = 1; }
         }
+        */
 
         /*
          * An overridden ReturnMove() method: This method does not use the optional

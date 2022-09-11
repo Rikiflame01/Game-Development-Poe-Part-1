@@ -36,7 +36,7 @@ namespace S2_POE_Part_1
             this.damage = heroDamage;
 
         }
-
+        /*
         public int heroHealth
         {
             get { return hp; }
@@ -47,6 +47,8 @@ namespace S2_POE_Part_1
             get { return maxHp; }
             set { maxHp = 20; }
         }
+        */
+
         //Remember hero damage = 2!
 
         /*

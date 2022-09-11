@@ -8,20 +8,27 @@ namespace S2_POE_Part_1
 {
     public class Map
     {
+        
+
         /*
          * A 2D Tile array to represent the map. This character array will be updated
         at all times to show the status of the map. Remember when initialising your
         map that it must be bordered with Obstacle tiles around the outside to
         prevent Character movement outside of the map
          */
-        //Student s1 = new Student();
 
-        Map hero = new Map(); //adjust
+        Tile[,] map;
+
+        //Student s1 = new Student();
+        
+
+        Map Hero = new Map(); //adjust
         public Map()
             {
                 
             }
         //Enemy array
+        String[] Enemies = new String[] { "Enemy1", "Enemy2", "Enemy3", "Enemy4" };
 
         public int width;
         public int height;
@@ -30,6 +37,7 @@ namespace S2_POE_Part_1
         public int enemies = 4;
 
         //A Random object for randomising numbers.
+        Random randomObject = new Random();
 
         public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemyNum) 
             {
@@ -45,5 +53,15 @@ namespace S2_POE_Part_1
             
         }
         
+        public void UpdateVision()
+        {
+
+        }
+
+        public void Create()
+        {
+           
+        }
+
     }
 }

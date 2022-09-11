@@ -46,6 +46,23 @@ namespace S2_POE_Part_1
         protected int maxHp;
         protected int damage;
 
+        public int health
+        {
+            get { return hp; }
+            set { hp = value; }
+        }
+
+        public int maxHealth
+        {
+            get { return maxHp; }
+            set { maxHp = value; }
+        }
+        protected int CharacterDamage
+        {
+            get { return damage; }
+            set { damage = value; }
+        }
+
         Tile[] gameTiles;
 
         public enum Movement
@@ -67,6 +84,10 @@ namespace S2_POE_Part_1
             its health by the attacking character’s damage. This is declared as virtual for
             later overriding by specific enemy types.
             */
+
+
+
+
         }
         public bool IsDead()
         {
@@ -87,10 +108,6 @@ namespace S2_POE_Part_1
            method and returns true or false.
          */
         }
-
-
-
-
 
         /*
 
@@ -118,10 +135,7 @@ namespace S2_POE_Part_1
         the validity of that move against a Character’s vision array.
         }
         */
-
-        //public abstract override string ToString();
-        //This is defined in the Character subclasses
-        //and overrides the traditional Object ToString() method.
+        public abstract override string ToString();
 
 
     }
