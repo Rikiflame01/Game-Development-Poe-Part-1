@@ -40,6 +40,9 @@ namespace S2_POE_Part_1
 
 
         SwampCreature Swampy1 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy2 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy3 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy4 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
 
         Random rand = new Random();
         List<PictureBox> items = new List<PictureBox>();
@@ -49,12 +52,15 @@ namespace S2_POE_Part_1
         public Form1()
         {
             InitializeComponent();
-            // Hero textHero = new Hero(50, 50, "H", Tile.TileType.Hero);
-            //gameLog.Text = textHero.returnMessage();
-            SwampCreature Swampy1 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
-            this.progressBar1.Value = Swampy1.health;
-            //Hero
 
+            SwampCreature Swampy1 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+            SwampCreature Swampy2 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+            SwampCreature Swampy3 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+            SwampCreature Swampy4 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+            this.progressBar1.Value = Swampy1.health;
+            this.progressBar2.Value = Swampy2.health;
+            this.progressBar3.Value = Swampy3.health;
+            this.progressBar4.Value = Swampy4.health;
         }
 
 
@@ -68,11 +74,6 @@ namespace S2_POE_Part_1
 
                 Swampy1.health -= 2;
                 this.progressBar1.Value = Swampy1.health;
-
-
-
-
-
 
         }
         private void startGame_Click(object sender, EventArgs e)
@@ -120,7 +121,7 @@ namespace S2_POE_Part_1
 
             newEnemy3.Location = new Point(xOfEnemy3, yOfEnemy3);
 
-            newEnemy3.Click += NewEnemy_Click;
+            newEnemy3.Click += NewEnemy3_Click;
 
             items.Add(newEnemy3);
             this.Controls.Add(newEnemy3);
@@ -132,7 +133,7 @@ namespace S2_POE_Part_1
 
             newEnemy4.Location = new Point(xOfEnemy4, yOfEnemy4);
 
-            newEnemy4.Click += NewEnemy_Click;
+            newEnemy4.Click += NewEnemy4_Click;
 
             items.Add(newEnemy4);
             this.Controls.Add(newEnemy4);
@@ -206,9 +207,22 @@ namespace S2_POE_Part_1
             //this.label7.Text = damageOutput.ToString();
         }
 
+        private void NewEnemy4_Click(object sender, EventArgs e)
+        {
+            Swampy4.health -= 2;
+            this.progressBar4.Value = Swampy4.health;
+        }
+
+        private void NewEnemy3_Click(object sender, EventArgs e)
+        {
+            Swampy3.health -= 2;
+            this.progressBar3.Value = Swampy3.health;
+        }
+
         private void NewEnemy2_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Swampy2.health -= 2;
+            this.progressBar2.Value = Swampy2.health;
         }
 
         private void button72_Click(object sender, EventArgs e)
