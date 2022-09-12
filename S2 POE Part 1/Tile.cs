@@ -22,6 +22,8 @@ namespace S2_POE_Part_1
             Weapon
         }
 
+        public TileType TileTypes { get { return _tileType; } set { _tileType = value; } }
+
         public int xPos
         {
             get { return x; }

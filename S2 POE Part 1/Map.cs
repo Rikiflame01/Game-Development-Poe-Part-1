@@ -22,19 +22,21 @@ namespace S2_POE_Part_1
         //Student s1 = new Student();
         
 
-        Map Hero = new Map(); //adjust
+        
         public Map()
             {
                 
             }
         //Enemy array
-        String[] Enemies = new String[] { "Enemy1", "Enemy2", "Enemy3", "Enemy4" };
+        private Hero hero;
+        private Enemy[] enemy;
+        private SwampCreature swampCreature;
 
-        public int width;
-        public int height;
-        public int maxMapWidth;
-        public int maxMapHeight;
-        public int enemies = 4;
+        private int width;
+        private int height;
+        private int maxMapWidth;
+        private int maxMapHeight;
+        private Random randomObj;
 
         //A Random object for randomising numbers.
         Random randomObject = new Random();
@@ -45,12 +47,26 @@ namespace S2_POE_Part_1
                 this.height = minHeight;
                 this.maxMapWidth = maxWidth;
                 this.maxMapHeight = maxHeight;
-                this.enemies = enemyNum;
+                randomObj = new Random();
+                height = randomObj.Next(minWidth, maxWidth);
+                width = randomObj.Next(minHeight, maxHeight);
                 
+                map = new Tile[width, height];
+                enemy = new Enemy[enemyNum];
+
+            Create(Tile.TileType.Hero);
+
+           /* for (int i = 0; i < enemyNum; i++)
+            {
+                enemy[i] = {SwampCreature} Create[Tile.TileType.Enemy];
             }
-        public void getmap()
+           */
+                UpdateVision();
+            }
+
+        public Tile[,] fetchMap()
         {
-            
+            return map;
         }
         
         public void UpdateVision()
@@ -58,9 +74,28 @@ namespace S2_POE_Part_1
 
         }
 
-        public void Create()
+        public static void Create(Tile.TileType Hero)
         {
            
+        }
+        public Enemy[] fetchEnemies()
+        {
+            return enemy;
+        }
+
+        public Hero fetchHero()
+        {
+            return hero;
+            
+        }
+
+        public int fetchWidth()
+        {
+            return width;
+        }
+        public int fetchHeight()
+        {
+            return height;
         }
 
     }

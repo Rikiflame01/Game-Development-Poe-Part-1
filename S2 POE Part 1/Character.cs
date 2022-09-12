@@ -77,14 +77,14 @@ namespace S2_POE_Part_1
         public bool alive = true;
         public bool isInRange = false;
 
-        public virtual void Attack()
+        public virtual void Attack(Character entity)
         {
             /*
             Public virtual void Attack(Character target): Attacks a target and decreases
             its health by the attacking character’s damage. This is declared as virtual for
             later overriding by specific enemy types.
             */
-
+            entity.health = health-this.CharacterDamage;
 
 
 

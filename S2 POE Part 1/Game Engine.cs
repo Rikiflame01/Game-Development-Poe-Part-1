@@ -8,12 +8,9 @@ namespace S2_POE_Part_1
 {
     public class GameEngine
     {
-        private string map;
+        private Map map;
 
-        public string Map
-        {
-            get { return map; }
-        }
+        public Map GetMap() { return map; }
 
         public GameEngine()
         {

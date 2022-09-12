@@ -28,7 +28,7 @@ namespace S2_POE_Part_1
 
         }
 
-        public SwampCreature(int xVal, int yVal)
+        private SwampCreature(int xVal, int yVal)
         {
             x = xVal;
             y = yVal;
@@ -36,6 +36,7 @@ namespace S2_POE_Part_1
             this.hp = 100;
             this.maxHp = 100;
         }
+
 
         public SwampCreature(int damage,int xVal, int yVal)
         {
@@ -52,6 +53,15 @@ namespace S2_POE_Part_1
             this.hp = health;
             this.maxHp = maxHealth;
         }
+
+
+        public static SwampCreature CreateCharacter(int xVal, int yVal)
+        {
+            return new SwampCreature(xVal, yVal);
+        }
+
+
+
 
         public override string ToString()
         {

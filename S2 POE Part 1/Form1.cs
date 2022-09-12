@@ -38,15 +38,14 @@ namespace S2_POE_Part_1
         public static int xOfGold3 = 550;
         public static int yOfGold3 = 75;
 
-
-        SwampCreature Swampy1 = new SwampCreature(xOfEnemy1, yOfEnemy1);
-        SwampCreature Swampy2 = new SwampCreature(xOfEnemy2, yOfEnemy2);
-        SwampCreature Swampy3 = new SwampCreature(xOfEnemy3, yOfEnemy3);
-        SwampCreature Swampy4 = new SwampCreature(xOfEnemy4, yOfEnemy4);
+        SwampCreature Swampy1 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy2 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy3 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy4 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
 
         Random rand = new Random();
         List<PictureBox> items = new List<PictureBox>();
-
+        private Map gameMap;
 
 
         public Form1()
@@ -54,15 +53,19 @@ namespace S2_POE_Part_1
             GameEngine gameEngine = new GameEngine();
             gameEngine.MovePlayer(xOfEnemy1, yOfEnemy1);
 
+            gameMap = gameEngine.GetMap();
             //this.label7.Text = gameEngine.MovePlayer(xOfEnemy1, yOfEnemy1).ToString();
+            //heroPlayer = gameMap.GetHero();
+
             InitializeComponent();
 
             Hero myHero = new Hero(defaultX, defaultY);
 
-            SwampCreature Swampy1 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
-            SwampCreature Swampy2 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
-            SwampCreature Swampy3 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
-            SwampCreature Swampy4 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+            SwampCreature Swampy1 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
+            SwampCreature Swampy2 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
+            SwampCreature Swampy3 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
+            SwampCreature Swampy4 = SwampCreature.CreateCharacter(xOfEnemy1, yOfEnemy1);
+            
             this.progressBar1.Value = Swampy1.health;
             this.progressBar2.Value = Swampy2.health;
             this.progressBar3.Value = Swampy3.health;
@@ -89,7 +92,7 @@ namespace S2_POE_Part_1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            #region Objects
+            #region PictureBoxes
             //Enemies
             PictureBox newEnemy1 = new PictureBox();
 
