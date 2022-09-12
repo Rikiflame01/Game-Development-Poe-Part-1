@@ -20,29 +20,29 @@ namespace S2_POE_Part_1
         public static int xOfEnemy1 = 250;
         public static int yOfEnemy1 = 75;
 
-        public int xOfEnemy2 = 350;
-        public int yOfEnemy2 = 125;
+        public static int xOfEnemy2 = 350;
+        public static int yOfEnemy2 = 125;
 
-        public int xOfEnemy3 = 600;
-        public int yOfEnemy3 = 75;
+        public static int xOfEnemy3 = 600;
+        public static int yOfEnemy3 = 75;
 
-        public int xOfEnemy4 = 500;
-        public int yOfEnemy4 = 125;
+        public static int xOfEnemy4 = 500;
+        public static int yOfEnemy4 = 125;
 
-        public int xOfGold1 = 300;
-        public int yOfGold1 = 75;
+        public static int xOfGold1 = 300;
+        public static int yOfGold1 = 75;
 
-        public int xOfGold2 = 425;
-        public int yOfGold2 = 125;
+        public static int xOfGold2 = 425;
+        public static int yOfGold2 = 125;
 
-        public int xOfGold3 = 550;
-        public int yOfGold3 = 75;
+        public static int xOfGold3 = 550;
+        public static int yOfGold3 = 75;
 
 
-        SwampCreature Swampy1 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
-        SwampCreature Swampy2 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
-        SwampCreature Swampy3 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
-        SwampCreature Swampy4 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy1 = new SwampCreature(xOfEnemy1, yOfEnemy1);
+        SwampCreature Swampy2 = new SwampCreature(xOfEnemy2, yOfEnemy2);
+        SwampCreature Swampy3 = new SwampCreature(xOfEnemy3, yOfEnemy3);
+        SwampCreature Swampy4 = new SwampCreature(xOfEnemy4, yOfEnemy4);
 
         Random rand = new Random();
         List<PictureBox> items = new List<PictureBox>();
@@ -51,7 +51,13 @@ namespace S2_POE_Part_1
 
         public Form1()
         {
+            GameEngine gameEngine = new GameEngine();
+            gameEngine.MovePlayer(xOfEnemy1, yOfEnemy1);
+
+            //this.label7.Text = gameEngine.MovePlayer(xOfEnemy1, yOfEnemy1).ToString();
             InitializeComponent();
+
+            Hero myHero = new Hero(defaultX, defaultY);
 
             SwampCreature Swampy1 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
             SwampCreature Swampy2 = new SwampCreature(1, 100, 100, xOfEnemy1, yOfEnemy1);
@@ -195,7 +201,7 @@ namespace S2_POE_Part_1
 
 
 
-            Hero myHero = new Hero(2, 20, 20,defaultX, defaultY);
+            Hero myHero = new Hero(defaultX, defaultY);
             
 
             this.gameLog.Text = myHero.ToString();
@@ -269,7 +275,7 @@ namespace S2_POE_Part_1
         {
             defaultY -= 50;
             //vision array check
-            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);
+            Hero myHero = new Hero(defaultX, defaultY);
 
             if (myHero.IsDead() == true)
             {
@@ -292,7 +298,7 @@ namespace S2_POE_Part_1
 
             this.heroBox.Location = new Point(defaultX, defaultY);
 
-            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);
+            Hero myHero = new Hero(defaultX, defaultY);
             this.gameLog.Text = myHero.ToString();
         }
 
@@ -303,7 +309,7 @@ namespace S2_POE_Part_1
 
 
             this.heroBox.Location = new Point(defaultX, defaultY);
-            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);
+            Hero myHero = new Hero(defaultX, defaultY);
             this.gameLog.Text = myHero.ToString();
         }
 
@@ -314,7 +320,7 @@ namespace S2_POE_Part_1
 
 
             this.heroBox.Location = new Point(defaultX, defaultY);
-            Hero myHero = new Hero(2, 10, 10, defaultX, defaultY);
+            Hero myHero = new Hero( defaultX, defaultY);
             this.gameLog.Text = myHero.ToString();
         }
 

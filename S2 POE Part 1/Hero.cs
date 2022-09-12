@@ -27,13 +27,13 @@ namespace S2_POE_Part_1
 
 
         }
-        public Hero(int heroDamage, int maxHealth, int health, int xVal, int yVal)
+        public Hero(int xVal, int yVal)
         {
             x = xVal;
             y = yVal;
-            this.hp = health;
-            this.maxHp = maxHealth;
-            this.damage = heroDamage;
+            this.hp = 20;
+            this.maxHp = 20;
+            this.damage = 2;
 
         }
         /*

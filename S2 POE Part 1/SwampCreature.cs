@@ -32,7 +32,11 @@ namespace S2_POE_Part_1
         {
             x = xVal;
             y = yVal;
+            this.CharacterDamage = 2;
+            this.hp = 100;
+            this.maxHp = 100;
         }
+
         public SwampCreature(int damage,int xVal, int yVal)
         {
             this.CharacterDamage = damage;

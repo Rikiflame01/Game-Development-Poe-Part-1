@@ -20,9 +20,13 @@ namespace S2_POE_Part_1
 
         }
 
-        public bool MovePlayer()
+        public bool MovePlayer(int x, int y)
         {
-            return true;
+            if (x == 250 && y == 75)
+            {
+                return true;
+            }
+            return false;
         }
 
     }
