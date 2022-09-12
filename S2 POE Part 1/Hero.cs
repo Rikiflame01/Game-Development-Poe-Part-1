@@ -36,20 +36,6 @@ namespace S2_POE_Part_1
             this.damage = 2;
 
         }
-        /*
-        public int heroHealth
-        {
-            get { return hp; }
-            set { hp = 20; }
-        }
-        public int maxHealth
-        {
-            get { return maxHp; }
-            set { maxHp = 20; }
-        }
-        */
-
-        //Remember hero damage = 2!
 
         /*
          * • An overridden ReturnMove() method: This method receives a movement
@@ -59,7 +45,12 @@ namespace S2_POE_Part_1
         if it is valid. If it is not valid, it returns a MovementEnum.None, which signals
         to the calling method that a movement should not be made.
          */
-        
+       /* public override Movement ReturnMove(Movement move)
+        {
+            
+
+        }
+       */
 
         public override string ToString()
         {
@@ -67,9 +58,9 @@ namespace S2_POE_Part_1
 
         }
 
-
-        //TextBox textbox = new TextBox();
-
-        //public string returnMessage() { return "HI"; }
+        public override Movement ReturnMove(Movement move)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace S2_POE_Part_1
     public abstract class Character : Tile
     {
         public string symbol;
+        protected Tile[] tileVisibility;
 
         public Character(int xVal, int yVal,string characterSymbol, TileType typeOfTile) : base(xVal, yVal, typeOfTile)
         {
@@ -97,20 +98,41 @@ namespace S2_POE_Part_1
 
 
 
-        public virtual bool CheckRange()
+        public virtual bool CheckRange(int tDistance)
         {
-            if (isInRange == true) { return true; }
+            if (tDistance == 0) { return true; }
+            if (tDistance <0) { return true; }
+            else if (tDistance > 0)
+            {
+                return false;
+            }
             return false;
-
            /*Public virtual bool CheckRange(Character target): Checks if a target is in
            range of a character(barehanded range is always 1, but this will be extended
            with weapon types later). It determines distance via the DistanceTo()
            method and returns true or false.
          */
         }
+        private int DistanceTo(int tDistance)
+        {
+            return tDistance;
+        }
+
+        public Tile[] VisibleTilesfetch()
+        {
+            return tileVisibility;
+        }
+
+        public void VisibleTilesfetch(Tile[] tiles)
+        {
+            tileVisibility = tiles;
+        }
+
+
 
         /*
 
+        
 
         /* private int DistanceTo()
          {
@@ -135,6 +157,8 @@ namespace S2_POE_Part_1
         the validity of that move against a Character’s vision array.
         }
         */
+        public abstract Movement ReturnMove(Movement movement = 0);
+
         public abstract override string ToString();
 
 
